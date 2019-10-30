@@ -1,0 +1,7 @@
+fstconcate
+
+If you are trying to fstconcat two FSTs, pay attention to start and end states. 
+C.fst = fstconcate(A.fst, B.fst)
+If A.fst has a last state that is not the start state then, the last state of A.fst gets hooked to first state of B.fst. 
+If you want the first state of A.fst and B.fst to be the same in the concvatenated FST, then make sure A.fst and B.fst have closure
+Likewise if you want an visual append like structure, then make sure A.fst and B.fst are not closed
