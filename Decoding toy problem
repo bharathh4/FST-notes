@@ -1,0 +1,25 @@
+Can you decode the following:
+
+nMMMarkssmaaan
+Maarzitiiaamnn
+
+as Marsman and Martian respectively
+
+Plan:
+1. Write a input symbol list
+2. Assumme that the following letters came in. More
+   accurately a letter distribution comes in. 
+   So we have a 14 postions and for each of those 
+   postion we have a letters distribution.
+   So we have a 26-length vector of probabilities of 
+   each letter. A [26 x 14] matrix
+
+3. Create a decoding graph that maps the letter sequence
+ to a words. 
+
+4. Searching the graph. 
+     Iterate thru the letter distribution
+     Create a token manger
+     Load the Decoding FST graph
+     Update your token manager using your letter distribution and the decoding graph
+     Make sure your token manager doesn't get too big
